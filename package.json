@@ -1,0 +1,20 @@
+{
+  "name": "murk",
+  "version": "0.0.0-dev",
+  "version_short": "0.0",
+  "keywords": [
+    "css",
+    "sass",
+    "dark-first",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "https://murk.wangkanai.com/",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

@@ -1,0 +1,9 @@
+# Usage:
+# install svgo globally: `npm i -g svgo`
+# svgo --config=build/svgo.yml --input=foo.svg
+
+# https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
+# replace default config
+
+multipass: true
+#full: true
