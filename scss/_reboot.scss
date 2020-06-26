@@ -1,0 +1,54 @@
+@import "variables";
+@import "vendor/rfs";
+
+// Reboot
+//
+// Normalization of HTML elements, manually forked from Normalize.css to remove
+// styles targeting irrelevant browsers while applying new styles.
+//
+// Normalize is licensed MIT. https://github.com/necolas/normalize.css
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: $font-size-root;
+}
+
+%heading {
+  margin-top:    0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+h1 {
+  @extend %heading;
+  @include font-size($h1-font-size);
+}
+
+h2 {
+  @extend %heading;
+  @include font-size($h2-font-size);
+}
+
+h3 {
+  @extend %heading;
+  @include font-size($h3-font-size);
+}
+
+h4 {
+  @extend %heading;
+  @include font-size($h4-font-size);
+}
+
+h5 {
+  @extend %heading;
+  @include font-size($h5-font-size);
+}
+
+h6 {
+  @extend %heading;
+  @include font-size($h6-font-size);
+}
