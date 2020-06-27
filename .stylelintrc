@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "scss/no-duplicate-mixins": true,
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ]
+  }
+}
