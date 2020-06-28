@@ -16,8 +16,12 @@
 }
 
 body {
-   margin: 0; //1
-   //font-family: $font-family-base;
+   margin: 0;
+   font-family: $font-family-base;
+   @include font-size($font-size-base);
+   color: $body-color;
+   background-color: $body-bg;
+   text-align: $body-text-align;
 }
 
 %heading {

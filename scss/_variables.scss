@@ -4,10 +4,12 @@
 
 // Colors
 $white:                  #fff !default;
+$bright:                 #c6c6c6 !default;
+$dark:                   #282828 !default;
 //$black:                  #000 !default;
 
 // Options
-$enable-rfs:             true !default;
+//$enable-rfs:             true !default;
 
 // Gradient
 $gradient:               linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
@@ -15,10 +17,15 @@ $gradient:               linear-gradient(180deg, rgba($white, .15), rgba($white,
 // Spacing
 $spacer:                 1rem !default;
 
+// Body
+$body-bg:                $dark !default;
+$body-color:             $bright !default;
+$body-text-align:        null !default;
+
 // Typography
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:  "JetBrains Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:       var(--murk-font-sans-serif) !default;
 //$font-family-code:            var(--murk-font-monospace) !default;
