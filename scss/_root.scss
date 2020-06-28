@@ -1,0 +1,6 @@
+// Root
+:root{
+   --bs-font-sans-serif: #{inspect($font-family-sans-serif)};
+   --murk-font-monospace: #{inspect($font-family-monospace)};
+   --murk-gradient: #{$gradient};
+}

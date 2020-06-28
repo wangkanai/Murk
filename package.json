@@ -21,18 +21,20 @@
       "start": "npm-run-all --parallel watch",
       "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
       "watch": "npm-run-all --parallel watch-*",
-      "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile\"",
-      "css": "npm-run-all css-compile css-minify",
+      "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+      "css": "npm-run-all css-compile css-prefix css-minify",
       "css-compile": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css",
       "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
       "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
       "css-lint-vars": "fusv scss/",
-      "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/murk.min.css dist/css/murk.css"
+      "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/murk.min.css dist/css/murk.css",
+      "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\""
    },
    "dependencies": {
       "rfs": "^9.0.3"
    },
    "devDependencies": {
+      "autoprefixer": "^9.8.4",
       "bundlewatch": "^0.2.7",
       "clean-css-cli": "^4.3.0",
       "eslint": "^7.3.1",
@@ -43,6 +45,7 @@
       "node-sass-package-importer": "^5.3.2",
       "nodemon": "^2.0.4",
       "npm-run-all": "^4.1.5",
+      "postcss-cli": "^7.1.1",
       "stylelint": "^13.6.1",
       "stylelint-config-recommended-scss": "^4.2.0",
       "stylelint-config-twbs-bootstrap": "^2.0.3",
