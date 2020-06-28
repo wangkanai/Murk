@@ -18,8 +18,9 @@
    "sass": "scss/murk.scss",
    "license": "MIT",
    "scripts": {
-      "start": "npm-run-all --parallel watch",
+      "start": "npm-run-all --parallel watch serve",
       "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
+      "serve": "live-server dist/",
       "watch": "npm-run-all --parallel watch-*",
       "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
       "css": "npm-run-all css-compile css-prefix css-minify",

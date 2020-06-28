@@ -2,11 +2,11 @@
    "files": [
       {
          "path": "./dist/css/murk.css",
-         "maxSize": "7kB"
+         "maxSize": "27kB"
       },
       {
          "path": "./dist/css/murk.min.css",
-         "maxSize": "7kB"
+         "maxSize": "21kB"
       }
    ]
 }
