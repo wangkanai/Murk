@@ -1,0 +1,29 @@
+// Images
+
+img{
+   // Responsive
+   &.fluid{
+      @include img-fluid();
+   }
+   // Thumbnails
+   &.thumbnail{
+      padding: $thumbnail-padding;
+      background-color: $thumbnail-bg;
+      border: $thumbnail-border-width solid $thumbnail-border-color;
+      @include border-radius($thumbnail-border-radius);
+      //@include box-shadow($thumbnail-box-shadow);
+      @include img-fluid();
+   }
+}
+
+figure{
+   display: inline-block;
+   img{
+      margin-bottom: $spacer/ 2;
+      line-height: 1;
+   }
+   figcaption{
+      @include font-size($figure-caption-font-size);
+      color: $figure-caption-color;
+   }
+}
