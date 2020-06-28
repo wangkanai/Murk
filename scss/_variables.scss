@@ -4,22 +4,22 @@
 
 // Colors
 // fusv-disable
-$white:   #fff !default;
-$gray-10: #fcfeff !default;
-$gray-20: #e5ebf1 !default;
-$gray-30: #dae1e8 !default;
-$gray-40: #c0ccd9 !default;
-$gray-50: #a2afbb !default;
-$gray-60: #6a757f !default;
-$gray-70: #424c55 !default;
-$gray-80: #292e34 !default;
-$gray-90: #1c2126 !default;
-$black:   #000 !default;
+$white:                    #fff !default;
+$gray-10:                  #fcfeff !default;
+$gray-20:                  #e5ebf1 !default;
+$gray-30:                  #dae1e8 !default;
+$gray-40:                  #c0ccd9 !default;
+$gray-50:                  #a2afbb !default;
+$gray-60:                  #6a757f !default;
+$gray-70:                  #424c55 !default;
+$gray-80:                  #292e34 !default;
+$gray-90:                  #1c2126 !default;
+$black:                    #000 !default;
 
-$dark:    #282828 !default;
-$bright:  #c6c6c6 !default;
+$dark:                     #282828 !default;
+$bright:                   #c6c6c6 !default;
 
-$blue:    #6897bb !default;
+$blue:                     #6897bb !default;
 
 $primary:                  $blue !default;
 // fusv-enable
@@ -57,6 +57,9 @@ $border-width:             1px !default;
 $border-radius:            .25rem !default;
 $border-radius-sm:         .2rem !default;
 //$border-radius-lg:        .3rem !default;
+
+// Container
+$container-padding-x:      1rem !default;
 
 // Typography
 // stylelint-disable value-keyword-case

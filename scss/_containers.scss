@@ -1,3 +1,6 @@
 // Containers
 
-
+.container,
+.container-fluid{
+   @include make-container();
+}
