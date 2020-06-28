@@ -5,8 +5,9 @@
  */
 
 // Configuration
-@import "variables";
 @import "functions";
+@import "variables";
+@import "mixins";
 
 // Layout & Components
 @import "root";

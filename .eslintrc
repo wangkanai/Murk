@@ -1,0 +1,18 @@
+{
+   "root": true,
+   "extends": [
+      "plugin:import/errors",
+      "plugin:import/warnings"
+   ],
+   "rules": {
+      "capitalized-comments": "off",
+      "indent": [
+         "error",
+         3,
+         {
+            "MemberExpression": "off",
+            "SwitchCase": 1
+         }
+      ]
+   }
+}

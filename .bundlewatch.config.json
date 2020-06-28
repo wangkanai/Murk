@@ -1,0 +1,12 @@
+{
+   "files": [
+      {
+         "path": "./dist/css/murk.css",
+         "maxSize": "7kB"
+      },
+      {
+         "path": "./dist/css/murk.min.css",
+         "maxSize": "7kB"
+      }
+   ]
+}

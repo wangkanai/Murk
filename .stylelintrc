@@ -1,11 +1,17 @@
 {
-  "rules": {
-    "scss/no-duplicate-mixins": true,
-    "scss/dollar-variable-default": [
-      true,
-      {
-        "ignore": "local"
-      }
-    ]
-  }
+   "extends": [
+      "stylelint-config-recommended-scss"
+   ],
+   "rules": {
+      "function-blacklist": [
+         "calc"
+      ],
+      "scss/no-duplicate-mixins": true,
+      "scss/dollar-variable-default": [
+         true,
+         {
+            "ignore": "local"
+         }
+      ]
+   }
 }
