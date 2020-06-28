@@ -5,18 +5,19 @@
 // Colors
 // fusv-disable
 $white:                   #fff !default;
-$bright:                  #c6c6c6 !default;
-$gray-10:                 #f8f9fa !default;
-$gray-20:                 #e9ecef !default;
-$gray-30:                 #dee2e6 !default;
-$gray-40:                 #ced4da !default;
-$gray-50:                 #adb5bd !default;
-$gray-60:                 #6c757d !default;
-$gray-70:                 #495057 !default;
-$gray-80:                 #343a40 !default;
-$gray-90:                 #212529 !default;
-$dark:                    #282828 !default;
+$gray-10:                 #fcfeff !default;
+$gray-20:                 #e5ebf1 !default;
+$gray-30:                 #dae1e8 !default;
+$gray-40:                 #c0ccd9 !default;
+$gray-50:                 #a2afbb !default;
+$gray-60:                 #6a757f !default;
+$gray-70:                 #424c55 !default;
+$gray-80:                 #292e34 !default;
+$gray-90:                 #1c2126 !default;
 $black:                   #000 !default;
+
+$dark:                    #282828 !default;
+$bright:                  #c6c6c6 !default;
 
 $blue:                    #6897bb !default;
 
@@ -94,6 +95,8 @@ $headings-color:          null !default;
 $small-font-size:         .85em !default;
 $sub-sup-font-size:       .75em !default;
 
+$text-muted:              $gray-50 !default;
+
 $hr-color:                inherit !default;
 $hr-height:               $border-width !default;
 $hr-opacity:              .25 !default;
@@ -116,3 +119,18 @@ $kbd-color:               $dark !default;
 $kbd-bg:                  $bright !default;
 
 $nested-kbd-font-weight:  $font-weight-bold !default;
+
+// Tables
+$table-cell-padding-y:    .5rem !default;
+//$table-cell-padding-x:    .5rem !default;
+//$table-cell-padding-y-sm: .25rem !default;
+//$table-cell-padding-x-sm: .25rem !default;
+
+$table-cell-vertical-align:   top !default;
+
+$table-color:                 $body-color !default;
+$table-bg:                    transparent !default;
+
+$table-th-font-weight:        null !default;
+
+$table-caption-color:     $text-muted !default;

@@ -168,7 +168,6 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 // Links
-
 a {
    color: $link-color;
    text-decoration: $link-decoration;
@@ -188,7 +187,6 @@ a {
 }
 
 // Code
-
 pre,
 code,
 kbd,
@@ -234,4 +232,41 @@ kbd {
       @include font-size(1em);
       font-weight: $nested-kbd-font-weight;
    }
+}
+
+// Figures
+figure {
+   margin: 0 0 1rem;
+}
+
+// Image
+img,
+svg {
+   vertical-align: middle;
+}
+
+// Tables
+table {
+   caption-side: bottom;
+   border-collapse: collapse;
+}
+caption {
+   padding-top: $table-cell-padding-y;
+   padding-bottom: $table-cell-padding-y;
+   color: $table-caption-color;
+   text-align: left;
+}
+th {
+   font-weight: $table-th-font-weight;
+   text-align: inherit;
+}
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+   border-color: inherit;
+   border-style: solid;
+   border-width: 0;
 }
