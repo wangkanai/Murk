@@ -353,6 +353,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-/package-lock.json
 
-
+# Project ignore
+package-lock.json
+dist/css/
