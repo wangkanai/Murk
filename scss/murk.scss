@@ -9,16 +9,20 @@
 @import "variables";
 @import "mixins";
 
-// Layout & Components
+// Layouts
 @import "root";
 @import "reboot";
 @import "type";
-@import "images";
 @import "header";
 @import "footer";
 @import "nav";
 @import "aside";
 @import "main";
+@import "section";
+@import "article";
+
+// Components
+@import "images";
 @import "canvas";
 @import "containers";
 
