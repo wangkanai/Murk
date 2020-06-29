@@ -45,13 +45,16 @@ hr {
 // Typography
 
 %heading {
-   margin-top:    0;
-   margin-bottom: $headings-margin-bottom;
-   font-family:   $headings-font-family;
-   font-style:    $headings-font-style;
-   font-weight:   $headings-font-weight;
-   line-height:   $headings-line-height;
-   color:         $headings-color;
+   margin: {
+      top:    0;
+      bottom: $headings-margin-bottom;
+   };
+
+   font-family: $headings-font-family;
+   font-style:  $headings-font-style;
+   font-weight: $headings-font-weight;
+   line-height: $headings-line-height;
+   color:       $headings-color;
 }
 
 h1 {
@@ -85,43 +88,53 @@ h6 {
 }
 
 p {
-   margin-top:    0;
-   margin-bottom: $paragraph-margin-bottom;
+   margin: {
+      top:    0;
+      bottom: $paragraph-margin-bottom
+   };
 }
 
 // Abbreviations
 abbr[title],
 abbr[data-original-title] {
-   text-decoration:          underline dotted;
    cursor:                   help;
+   text-decoration:          underline dotted;
    text-decoration-skip-ink: none;
 }
 
 // Address
 address {
-   margin-bottom: 1rem;
-   font-style:    normal;
-   line-height:   inherit;
+   margin: {
+      bottom: 1rem;
+   };
+   font-style:  normal;
+   line-height: inherit;
 }
 
 // Lists
 ol,
 ul {
-   padding-left: 2rem;
+   padding: {
+      left: 2rem;
+   };
 }
 
 ol,
 ul,
 dl {
-   margin-top:    0;
-   margin-bottom: 1rem;
+   margin: {
+      top:    0;
+      bottom: 1rem;
+   }
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-   margin-bottom: 0;
+   margin: {
+      bottom: 0;
+   }
 }
 
 dt {
@@ -129,8 +142,10 @@ dt {
 }
 
 dd {
-   margin-bottom: .5rem;
-   margin-left:   0;
+   margin: {
+      left:   0;
+      bottom: .5rem;
+   }
 }
 
 // Blockquote
@@ -201,12 +216,14 @@ samp {
 }
 
 pre {
-   display:       block;
-   margin-top:    0;
-   margin-bottom: 1rem;
-   overflow:      auto;
+   display:  block;
+   margin: {
+      top:    0;
+      bottom: 1rem;
+   }
+   overflow: auto;
    @include font-size($code-font-size);
-   color:         $pre-color;
+   color:    $pre-color;
 
    code {
       @include font-size(inherit);
@@ -257,10 +274,12 @@ table {
 }
 
 caption {
-   padding-top:    $table-cell-padding-y;
-   padding-bottom: $table-cell-padding-y;
-   color:          $table-caption-color;
-   text-align:     left;
+   padding: {
+      top:    $table-cell-padding-y;
+      bottom: $table-cell-padding-y;
+   }
+   color:      $table-caption-color;
+   text-align: left;
 }
 
 th {
@@ -274,9 +293,11 @@ tfoot,
 tr,
 td,
 th {
-   border-color: inherit;
-   border-style: solid;
-   border-width: 0;
+   border: {
+      color: inherit;
+      style: solid;
+      width: 0;
+   }
 }
 
 // Forms
