@@ -16,4 +16,36 @@ button,
    user-select: none;
    background-color: transparent;
    border: $button-border-width solid transparent;
+   //@include button-size($button-padding-y, $button-padding-x, $button-font-size, $button-border-radius);
+   //@include transition($button-transition);
+
+   &:hover {
+      color: $body-color;
+      text-decoration: if($link-hover-decoration == underline, none, null);
+   }
+
+   .check:focus + &,
+   &:focus {
+      outline: 0;
+      box-shadow: $button-focus-box-shadow;
+   }
+
+   .check:checked + &,
+   .check:active + &,
+   &:active,
+   &.active {
+      @include box-shadow($button-active-box-shadow);
+
+      &:focus {
+         @include box-shadow($button-focus-box-shadow, $button-active-box-shadow);
+      }
+   }
+
+   &:disabled,
+   &.disabled,
+   fieldset:disabled & {
+      pointer-events: none;
+      opacity: $button-disabled-opacity;
+      @include box-shadow(none);
+   }
 }
