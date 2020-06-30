@@ -1,0 +1,19 @@
+// Buttons
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+   display: inline-block;
+   font-family: $button-font-family;
+   font-weight: $button-font-weight;
+   color: $body-color;
+   text-align: center;
+   text-decoration: if($link-decoration == none, null, none);
+   white-space: $button-white-space;
+   vertical-align: middle;
+   cursor: if($enable-button-pointers, pointer, null);
+   user-select: none;
+   background-color: transparent;
+   border: $button-border-width solid transparent;
+}
