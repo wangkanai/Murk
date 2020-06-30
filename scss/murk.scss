@@ -10,20 +10,9 @@
 @import "mixins";
 
 // Layouts
-@import "root";
-@import "reboot";
-@import "type";
-@import "header";
-@import "footer";
-@import "nav";
-@import "aside";
-@import "main";
-@import "section";
-@import "article";
+@import "layouts";
 
 // Components
-@import "images";
-@import "canvas";
-@import "containers";
+@import "components";
 
 // Utilities
