@@ -11,43 +11,12 @@
 $gradient:                  linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 @import "variables/links";
-
-// Paragraphs
-$paragraph-margin-bottom:   1rem !default;
-
-// Breakpoints
-
-// Components
-$border-width:              1px !default;
-
-$border-radius:             .25rem !default;
-$border-radius-sm:          .2rem !default;
-//$border-radius-lg:        .3rem !default;
-
-// Container
-$container-padding-x:       1rem !default;
+@import "variables/paragraph";
 
 @import "variables/components";
 @import "variables/types";
 @import "variables/codes";
-
 @import "variables/forms";
-
-
-// Tables
-$table-cell-padding-y:      .5rem !default;
-//$table-cell-padding-x:    .5rem !default;
-//$table-cell-padding-y-sm: .25rem !default;
-//$table-cell-padding-x-sm: .25rem !default;
-
-//$table-cell-vertical-align: top !default;
-
-//$table-color:               $body-color !default;
-//$table-bg:                  transparent !default;
-
-$table-th-font-weight:      null !default;
-
-$table-caption-color:       $text-muted !default;
-
+@import "variables/tables";
 @import "variables/images";
 
