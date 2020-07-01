@@ -6,17 +6,12 @@
 @import "variables/options";
 @import "variables/spacings";
 @import "variables/body";
-
-// Gradient
-$gradient:                  linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
-
+@import "variables/gradient";
 @import "variables/links";
 @import "variables/paragraph";
-
 @import "variables/components";
 @import "variables/types";
 @import "variables/codes";
 @import "variables/forms";
 @import "variables/tables";
 @import "variables/images";
-
