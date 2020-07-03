@@ -1,0 +1,9 @@
+// Gradients
+
+@mixin gradient-bg($color: null) {
+   background-color: $color;
+
+   @if $enable-gradients {
+      background-image: var(--bs-gradient);
+   }
+}

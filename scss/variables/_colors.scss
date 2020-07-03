@@ -1,31 +1,71 @@
 // Colors
 
 // fusv-disable
-$white:   #fff !default;
-$gray-10: #fcfeff !default;
-$gray-20: #e5ebf1 !default;
-$gray-30: #dae1e8 !default;
-$gray-40: #c0ccd9 !default;
-$gray-50: #a2afbb !default;
-$gray-60: #6a757f !default;
-$gray-70: #424c55 !default;
-$gray-80: #292e34 !default;
-$gray-90: #1c2126 !default;
-$black:   #000 !default;
+$white:        #fff !default;
+$gray-10:      #fcfeff !default;
+$gray-20:      #e5ebf1 !default;
+$gray-30:      #dae1e8 !default;
+$gray-40:      #c0ccd9 !default;
+$gray-50:      #a2afbb !default;
+$gray-60:      #6a757f !default;
+$gray-70:      #424c55 !default;
+$gray-80:      #292e34 !default;
+$gray-90:      #1c2126 !default;
+$black:        #000 !default;
 
-$dark:    #282828 !default;
-$bright:  #c6c6c6 !default;
+$dark:         #282828 !default;
+$light:        #c6c6c6 !default;
 
-$blue:    #3679ac !default;
-$indigo:  #7d4dce !default;
-$purple:  #9778ce !default;
-$pink:    #e561a2 !default;
-$red:     #b43434 !default;
-$orange:  #e77c2d !default;
-$yellow:  #dbb130 !default;
-$green:   #32aa34 !default;
-$teal:    #13b686 !default;
-$cyan:    #5c95a1 !default;
+$blue:         #3679ac !default;
+$indigo:       #7d4dce !default;
+$purple:       #9778ce !default;
+$pink:         #e561a2 !default;
+$red:          #b43434 !default;
+$orange:       #e77c2d !default;
+$yellow:       #dbb130 !default;
+$green:        #32aa34 !default;
+$teal:         #13b686 !default;
+$cyan:         #5c95a1 !default;
 
-$primary: $blue !default;
+$colors:       (
+                  "blue": $blue,
+                  "indigo": $indigo,
+                  "purple": $purple,
+                  "pink": $pink,
+                  "red": $red,
+                  "orange": $orange,
+                  "yellow": $yellow,
+                  "green": $green,
+                  "teal": $teal,
+                  "cyan": $cyan,
+                  "white": $white,
+                  "black": $black,
+                  "gray": $gray-60,
+                  "dark": $dark
+               ) !default;
+
+
+$primary:      $blue !default;
+$secondary:    $gray-60 !default;
+$success:      $green !default;
+$info:         $cyan !default;
+$warning:      $yellow !default;
+$danger:       $red !default;
+
+$theme-colors: (
+                  "primary": $primary,
+                  "secondary": $secondary,
+                  "success": $success,
+                  "info": $info,
+                  "warning": $warning,
+                  "danger": $danger,
+                  "light": $light,
+                  "dark": $dark
+               ) !default;
 // fusv-enable
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   3 !default;
+$color-contrast-dark:      $gray-90 !default;
+$color-contrast-light:     $white !default;

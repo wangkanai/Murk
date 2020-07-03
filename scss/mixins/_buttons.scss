@@ -5,3 +5,114 @@
    @include font-size($font-size);
    @include border-radius($border-radius, 0);
 }
+
+// Button variants
+
+@mixin button-variant(
+   $background,
+   $border,
+   $color: color-contrast($background),
+   $hover-background: darken($background, 7.5%),
+   $hover-border: darken($border, 10%),
+   $hover-color: color-contrast($hover-background),
+   $active-background: darken($background, 10%),
+   $active-border: darken($border, 12.5%),
+   $active-color: color-contrast($active-background)
+) {
+   color:        $color;
+   @include gradient-bg($background);
+   border-color: $border;
+   @include box-shadow($button-box-shadow);
+
+   &:hover {
+      color:        $hover-color;
+      @include gradient-bg($hover-background);
+      border-color: $hover-border;
+   }
+
+   .button-check:focus + &,
+   &:focus {
+      color:        $hover-color;
+      @include gradient-bg($hover-background);
+      border-color: $hover-border;
+      @if $enable-shadows {
+         @include box-shadow($button-box-shadow, 0 0 0 $button-focus-width rgba(mix($color, $border, 15%), .5));
+      } @else {
+         box-shadow: 0 0 0 $button-focus-width rgba(mix($color, $border, 15%), .5);
+      }
+   }
+
+   .button-check:checked + &,
+   .button-check:active + &,
+   &:active,
+   &.active,
+   .show > &.dropdown-toggle {
+      color:            $active-color;
+      background-color: $active-background;
+      background-image: if($enable-gradients, none, null);
+      border-color:     $active-border;
+
+      &:focus {
+         @if $enable-shadows {
+            @include box-shadow($button-active-box-shadow, 0 0 0 $button-focus-width rgba(mix($color, $border, 15%), .5));
+         } @else {
+            box-shadow: 0 0 0 $button-focus-width rgba(mix($color, $border, 15%), .5);
+         }
+      }
+   }
+
+   &:disabled,
+   &.disabled {
+      color:            $color;
+      background-color: $background;
+      background-image: if($enable-gradients, none, null);
+      border-color:     $border;
+   }
+}
+
+@mixin button-outline-variant(
+   $color,
+   $color-hover: color-contrast($color),
+   $active-background: $color,
+   $active-border: $color,
+   $active-color: color-contrast($active-background)
+) {
+   color:        $color;
+   border-color: $color;
+
+   &:hover {
+      color:            $color-hover;
+      background-color: $active-background;
+      border-color:     $active-border;
+   }
+
+   .button-check:focus + &,
+   &:focus {
+      box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+   }
+
+   .button-check:checked + &,
+   .button-check:active + &,
+   &:active,
+   &.active,
+   &.dropdown-toggle.show {
+      color:            $active-color;
+      background-color: $active-background;
+      border-color:     $active-border;
+
+      &:focus {
+         @if $enable-shadows {
+            @include box-shadow($button-active-box-shadow, 0 0 0 $button-focus-width rgba($color, .5));
+         } @else {
+            box-shadow: 0 0 0 $button-focus-width rgba($color, .5);
+         }
+      }
+   }
+
+   &:disabled,
+   &.disabled {
+      color:            $color;
+      background-color: transparent;
+   }
+}
+
