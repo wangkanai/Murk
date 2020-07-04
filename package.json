@@ -29,7 +29,10 @@
       "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
       "css-lint-vars": "fusv scss/",
       "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/murk.min.css dist/css/murk.css",
-      "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\""
+      "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+      "hugo": "hugo server --port 9001 --disableFastRender",
+      "hugo-build": "hugo --cleanDestinationDir",
+      "hugo-compile" : "npm run hugo-build"
    },
    "dependencies": {
       "rfs": "^9.0.3"
@@ -41,6 +44,7 @@
       "eslint": "^7.3.1",
       "eslint-plugin-import": "^2.22.0",
       "find-unused-sass-variables": "^2.0.0",
+      "hugo-bin": "^0.61.0",
       "live-server": "^1.2.1",
       "node-sass": "^4.14.1",
       "node-sass-package-importer": "^5.3.2",
@@ -54,5 +58,8 @@
    },
    "files": [
       "scss/**/*.scss"
-   ]
+   ],
+   "hugo-bin": {
+      "buildTags": "extended"
+   }
 }
