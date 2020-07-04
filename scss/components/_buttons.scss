@@ -54,14 +54,14 @@ button,
 // Alternate buttons
 //
 
-//@each $color, $value in $theme-colors {
-//   .button-#{$color} {
-//      @include button-variant($value, $value);
-//   }
-//}
-//
-//@each $color, $value in $theme-colors {
-//   .button-outline-#{$color} {
-//      @include button-outline-variant($value);
-//   }
-//}
+@each $color, $value in $theme-colors {
+   button.#{$color} {
+      @include button-variant($value, $value);
+   }
+}
+
+@each $color, $value in $theme-colors {
+   button.outline-#{$color} {
+      @include button-outline-variant($value);
+   }
+}
