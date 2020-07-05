@@ -27,6 +27,7 @@ module:
       - source:           site/static/favicons
         target:           static
 
+
 params:
    description:         "Admin portal dark and mobile first frontend framework"
    authors:             "Sarin Na Wangkanai"
