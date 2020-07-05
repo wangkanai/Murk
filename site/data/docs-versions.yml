@@ -1,0 +1,5 @@
+- group: v1.x
+  baseurl: "https://murk.wangkanai.com"
+  description: "Current major release. Last update was 0.0-dev"
+  versions:
+    - v: "1.0"

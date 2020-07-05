@@ -31,3 +31,5 @@ module:
 params:
    description:         "Admin portal dark and mobile first frontend framework"
    authors:             "Sarin Na Wangkanai"
+   current_version:      "0.0-dev1"
+   docs_version:         "1.0"
