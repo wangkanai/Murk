@@ -24,11 +24,8 @@ module:
         target:           layouts
       - source:           site/static
         target:           static
-      - source:           site/static/apple-touch-icon.png
-        target:           static/apple-touch-icon.png
-      - source:           site/static/favicon.ico
-        target:           static/favicon.ico
-
+      - source:           site/static/favicons
+        target:           static
 
 params:
    description:         "Admin portal dark and mobile first frontend framework"
