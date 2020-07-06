@@ -1,0 +1,6 @@
+// Printing
+
+// fusv-disable
+$print-page-size:       a4 !default;
+$print-body-min-width:  map-get($grid-breakpoints, "lg") !default;
+// fusv-enable

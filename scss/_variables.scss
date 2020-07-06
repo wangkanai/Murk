@@ -12,6 +12,7 @@
 @import "variables/z-index";
 @import "variables/transition";
 
+// Layouts
 @import "variables/body";
 @import "variables/components/shared";
 @import "variables/typography";
@@ -19,10 +20,12 @@
 @import "variables/containers";
 @import "variables/paragraph";
 
+// Forms
+@import "variables/forms/buttons";
+
 // Components
 @import "variables/components/header";
 @import "variables/components/links";
-@import "variables/components/buttons";
 @import "variables/components/codes";
 @import "variables/components/tables";
 @import "variables/components/images";
@@ -31,3 +34,4 @@
 @import "variables/utilities";
 
 // Printing
+@import "variables/printing";

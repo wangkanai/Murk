@@ -8,25 +8,33 @@ header {
    flex-shrink:    0;
    min-height:     $header-height;
 
-   &[class*="bg-"]  {
+   &[class*="bg-"] {
       border-color: rgba($black, .1);
    }
+
    &.fixed {
       position: fixed;
-      right: 0;
-      left: 0;
-      z-index: $zindex-fixed - 1;
+      right:    0;
+      left:     0;
+      z-index:  $zindex-fixed - 1;
    }
-   &.sub{
+
+   &.sub {
       border-bottom: 0;
    }
 
-   &.brand{
-      display: inline-flex;
-      align-items: center;
+   .brand {
+      display:         inline-flex;
+      align-items:     center;
       justify-content: center;
-      width: $header-brand-width;
-      min-height: $header-height;
-      transition: width $transition-speed;
+      width:           $header-brand-width;
+      min-height:      $header-height;
+      transition:      width $transition-speed;
+
+      &.center {
+         position:  absolute;
+         top:       $header-height;
+         transform: translate(-50%, -100%);
+      }
    }
 }
