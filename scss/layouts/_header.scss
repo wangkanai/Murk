@@ -23,19 +23,13 @@ header {
       border-bottom: 0;
    }
 
-   &.dark {
-      background: $header-dark-bg;
-   }
-
-   &.light {
-      background: $header-light-bg;
-   }
 
    .brand {
       display:         inline-flex;
       align-items:     center;
       justify-content: center;
       width:           $header-brand-width;
+      min-width:       $header-brand-minimized-width;
       min-height:      $header-height;
       font-weight:     $header-brand-font-weight;
       transition:      width $transition-speed;
@@ -53,13 +47,18 @@ header {
    }
 
    .toggler {
-      min-width:        50px;
+      padding:          0;
+      min-width:        $header-toggler-height;
       @include font-size($header-toggler-font-size);
       background-color: $header-toggler-bg;
       border:           0;
       @include borders($header-toggler-border);
       @include border-radius($header-toggler-border-radius);
 
+      &:hover{
+         color: $body-color;
+         text-decoration: none;
+      }
       &:focus,
       &.focus {
          outline: 0;
@@ -92,7 +91,34 @@ header {
             align-items:   center;
             padding-right: $header-nav-link-padding-x;
             padding-left:  $header-nav-link-padding-x;
+
+            &:hover {
+               text-decoration: none;
+            }
          }
       }
+   }
+
+   // Themes
+   &.dark {
+      background: $header-dark-bg;
+
+      .brand {
+         color: $header-dark-color
+      }
+
+      a,
+      button {
+         color: $header-dark-color;
+
+         &:hover,
+         &:focus {
+            color: $header-dark-hover-color;
+         }
+      }
+   }
+
+   &.light {
+      background: $header-light-bg;
    }
 }

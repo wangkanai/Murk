@@ -5,8 +5,9 @@
 </head>
 <body>
    {{ partial "header" . }}
-   {{ partial "aside" . }}
-   {{ .Content }}
+   <main id="content">
+      {{ .Content }}
+   </main>
    {{ partial "footer" . }}
 </body>
 </html>
