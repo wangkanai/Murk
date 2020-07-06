@@ -52,3 +52,12 @@ $mark-padding:             .2em !default;
 $mark-bg:                  #616146 !default;
 
 $dt-font-weight:           $font-weight-bold !default;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+                           ("<","%3c"),
+                           (">","%3e"),
+                           ("#","%23"),
+                           ("(","%28"),
+                           (")","%29"),
+                     ) !default;

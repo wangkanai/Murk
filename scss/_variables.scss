@@ -2,19 +2,32 @@
 // Variables
 //
 
+// Colors
 @import "variables/colors";
-@import "variables/escaped";
+@import "variables/gradient";
+
+// Options
 @import "variables/options";
 @import "variables/spacings";
+@import "variables/z-index";
+@import "variables/transition";
+
 @import "variables/body";
-@import "variables/gradient";
+@import "variables/components/shared";
+@import "variables/typography";
 @import "variables/breakpoints";
 @import "variables/containers";
-@import "variables/links";
 @import "variables/paragraph";
-@import "variables/components";
-@import "variables/types";
-@import "variables/codes";
-@import "variables/forms";
-@import "variables/tables";
-@import "variables/images";
+
+// Components
+@import "variables/components/header";
+@import "variables/components/links";
+@import "variables/components/buttons";
+@import "variables/components/codes";
+@import "variables/components/tables";
+@import "variables/components/images";
+
+// Utilities
+@import "variables/utilities";
+
+// Printing

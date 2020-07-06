@@ -1,3 +1,32 @@
 // Header
 
-header{display: block;}
+header {
+   position:       relative;
+   display:        flex;
+   flex-direction: row;
+   flex-wrap:      wrap;
+   flex-shrink:    0;
+   min-height:     $header-height;
+
+   &[class*="bg-"]  {
+      border-color: rgba($black, .1);
+   }
+   &.fixed {
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: $zindex-fixed - 1;
+   }
+   &.sub{
+      border-bottom: 0;
+   }
+
+   &.brand{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: $header-brand-width;
+      min-height: $header-height;
+      transition: width $transition-speed;
+   }
+}
