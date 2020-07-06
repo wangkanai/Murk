@@ -1,0 +1,10 @@
+.icon{
+   display: inline-block;
+   color: inherit;
+   text-align: center;
+   fill: currentColor;
+
+   &.toggler:after{
+      content: '\2261';
+   }
+}

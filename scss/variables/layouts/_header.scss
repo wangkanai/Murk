@@ -1,0 +1,21 @@
+// Header
+
+$header-height:                40px !default;
+$header-brand-width:           auto !default;
+$header-brand-font-size:       $font-size-base !default;
+$header-brand-font-weight:     600 !default;
+
+$header-nav-link-padding-x:    .5rem !default;
+
+// Toggler
+$header-toggler-bg:            transparent !default;
+$header-toggler-font-size:     $font-size-base !default;
+$header-toggler-border:        0 !default;
+$header-toggler-border-radius: $button-border-radius !default;
+
+// Themes
+$header-light-bg:              $light !default;
+//$header-light-color:           rgba($black, .5) !default;
+
+$header-dark-bg:               $gray-90 !default;
+//$header-dark-color:            rgba($white, .75) !default;

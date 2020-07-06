@@ -23,18 +23,76 @@ header {
       border-bottom: 0;
    }
 
+   &.dark {
+      background: $header-dark-bg;
+   }
+
+   &.light {
+      background: $header-light-bg;
+   }
+
    .brand {
       display:         inline-flex;
       align-items:     center;
       justify-content: center;
       width:           $header-brand-width;
       min-height:      $header-height;
+      font-weight:     $header-brand-font-weight;
       transition:      width $transition-speed;
+      @include font-size($header-brand-font-size);
+      margin: {
+         top:    0;
+         bottom: 0;
+      };
 
       &.center {
          position:  absolute;
          top:       $header-height;
          transform: translate(-50%, -100%);
+      }
+   }
+
+   .toggler {
+      min-width:        50px;
+      @include font-size($header-toggler-font-size);
+      background-color: $header-toggler-bg;
+      border:           0;
+      @include borders($header-toggler-border);
+      @include border-radius($header-toggler-border-radius);
+
+      &:focus,
+      &.focus {
+         outline: 0;
+      }
+
+      .icon {
+         display:             block;
+         height:              $header-toggler-font-size * 1.25;
+         background-repeat:   no-repeat;
+         background-position: center center;
+         background-size:     100% 100%;
+      }
+   }
+
+   ul {
+      display:        flex;
+      flex-direction: row;
+      align-items:    center;
+      min-height:     $header-height;
+      padding:        0;
+      margin-bottom:  0;
+      list-style:     none;
+
+      li {
+         position: relative;
+
+         a,
+         button {
+            display:       flex;
+            align-items:   center;
+            padding-right: $header-nav-link-padding-x;
+            padding-left:  $header-nav-link-padding-x;
+         }
       }
    }
 }
