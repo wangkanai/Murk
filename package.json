@@ -32,9 +32,10 @@
       "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
       "hugo": "hugo server --port 9001 --disableFastRender",
       "hugo-build": "hugo --cleanDestinationDir",
-      "hugo-compile" : "npm run hugo-build"
+      "hugo-compile": "npm run hugo-build"
    },
    "dependencies": {
+      "bootstrap-icons": "^1.0.0-alpha5",
       "rfs": "^9.0.3"
    },
    "devDependencies": {

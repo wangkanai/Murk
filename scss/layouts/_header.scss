@@ -55,10 +55,18 @@ header {
       @include borders($header-toggler-border);
       @include border-radius($header-toggler-border-radius);
 
-      &:hover{
-         color: $body-color;
+      &:hover,
+      &:focus,
+      &.focus {
+         color:      $primary;
+         border:     $header-toggler-border-hover;
+         box-shadow: none;
+      }
+
+      &:hover {
          text-decoration: none;
       }
+
       &:focus,
       &.focus {
          outline: 0;
@@ -89,6 +97,7 @@ header {
          button {
             display:       flex;
             align-items:   center;
+            min-height:    $header-height;
             padding-right: $header-nav-link-padding-x;
             padding-left:  $header-nav-link-padding-x;
 
@@ -102,23 +111,39 @@ header {
    // Themes
    &.dark {
       background: $header-dark-bg;
+      @include borders($header-dark-border);
 
-      .brand {
-         color: $header-dark-color
+      .sub {
+         margin-top: -1px;
+         border-top: $subheader-dark-separator;
       }
 
-      a,
-      button {
-         color: $header-dark-color;
+      .brand,
+      .brand a {
+         color:            $header-dark-brand-color;
+         background-color: $header-dark-brand-bg;
+         @include borders($header-dark-brand-border);
 
-         &:hover,
-         &:focus {
-            color: $header-dark-hover-color;
+         &:hover, &:focus {
+            color: $header-dark-brand-hover-color;
          }
       }
-   }
 
-   &.light {
-      background: $header-light-bg;
+      ul {
+         li {
+            a,
+            button {
+               color: $header-dark-color;
+
+               &:hover,
+               &:focus {
+                  color:            $header-dark-hover-color;
+                  background-color: $header-dark-hover-bg;
+                  @include borders($header-dark-hover-color);
+               }
+            }
+         }
+      }
+
    }
 }
