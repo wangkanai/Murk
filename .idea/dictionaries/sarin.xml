@@ -2,6 +2,8 @@
   <dictionary name="sarin">
     <words>
       <w>navbar</w>
+      <w>toggler</w>
+      <w>zindex</w>
     </words>
   </dictionary>
 </component>

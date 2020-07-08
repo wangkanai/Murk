@@ -7,6 +7,8 @@ header {
    flex-wrap:      wrap;
    flex-shrink:    0;
    min-height:     $header-height;
+   background:     $header-bg;
+   @include borders($header-border);
 
    &[class*="bg-"] {
       border-color: rgba($black, .1);
@@ -21,6 +23,8 @@ header {
 
    &.sub {
       border-bottom: 0;
+      margin-top:    -1px;
+      border-top:    $subheader-separator;
    }
 
 
@@ -33,43 +37,46 @@ header {
       min-height:      $header-height;
       font-weight:     $header-brand-font-weight;
       transition:      width $transition-speed;
+      padding-right:   $header-nav-link-padding-x;
+      padding-left:    $header-nav-link-padding-x;
       @include font-size($header-brand-font-size);
-      margin: {
-         top:    0;
-         bottom: 0;
-      };
+      margin:          0;
+   }
 
-      &.center {
-         position:  absolute;
-         top:       $header-height;
-         transform: translate(-50%, -100%);
+   .brand,
+   .brand a {
+      color:            $header-brand-color;
+      background-color: $header-brand-bg;
+      //@include borders($header-brand-border);
+
+      &:hover, &:focus {
+         color:            $header-brand-hover-color;
+         background-color: $header-brand-hover-bg;
       }
    }
 
    .toggler {
+      display:          inline-flex;
+      align-items:      center;
+      justify-content:  center;
+      background-color: $header-toggler-bg;
       padding:          0;
       min-width:        $header-toggler-height;
       @include font-size($header-toggler-font-size);
-      background-color: $header-toggler-bg;
       border:           0;
       @include borders($header-toggler-border);
       @include border-radius($header-toggler-border-radius);
 
       &:hover,
-      &:focus,
-      &.focus {
+      &:focus {
          color:      $primary;
          border:     $header-toggler-border-hover;
          box-shadow: none;
+         outline: 0;
       }
 
       &:hover {
          text-decoration: none;
-      }
-
-      &:focus,
-      &.focus {
-         outline: 0;
       }
 
       .icon {
@@ -100,50 +107,17 @@ header {
             min-height:    $header-height;
             padding-right: $header-nav-link-padding-x;
             padding-left:  $header-nav-link-padding-x;
+            color:         $header-color;
+            //@include borders($header-border);
 
-            &:hover {
-               text-decoration: none;
+            &:hover,
+            &:focus {
+               text-decoration:  none;
+               color:            $header-hover-color;
+               background-color: $header-hover-bg;
+               //@include borders($header-hover-border);
             }
          }
       }
-   }
-
-   // Themes
-   &.dark {
-      background: $header-dark-bg;
-      @include borders($header-dark-border);
-
-      .sub {
-         margin-top: -1px;
-         border-top: $subheader-dark-separator;
-      }
-
-      .brand,
-      .brand a {
-         color:            $header-dark-brand-color;
-         background-color: $header-dark-brand-bg;
-         @include borders($header-dark-brand-border);
-
-         &:hover, &:focus {
-            color: $header-dark-brand-hover-color;
-         }
-      }
-
-      ul {
-         li {
-            a,
-            button {
-               color: $header-dark-color;
-
-               &:hover,
-               &:focus {
-                  color:            $header-dark-hover-color;
-                  background-color: $header-dark-hover-bg;
-                  @include borders($header-dark-hover-color);
-               }
-            }
-         }
-      }
-
    }
 }

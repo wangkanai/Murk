@@ -1,42 +1,43 @@
 // Header
 
-$header-height:                 40px !default;
+$header-height:                40px !default;
 
 //$header-padding-y:             $spacer / 2 !default;
 //$header-padding-x:             $spacer !default;
 
-$header-nav-link-padding-x:     1rem !default;
+$header-color:                 rgba($white, .75) !default;
+$header-bg:                    rgba($night, .75) !default;
+$header-border:                (bottom: 1px solid $gray-80) !default;
+$header-hover-color:           rgba($white, .9) !default;
+$header-hover-bg:              $gray-70 !default;
+$header-hover-border:          (bottom: 1px solid $gray-60) !default;
+$header-active-color:          rgba($white, .8) !default;
 
-$header-brand-width:            auto !default;
-$header-brand-minimized-width:  56px !default;
+$header-nav-link-padding-x:    1rem !default;
+
+$subheader-separator:          1px solid $gray-80 !default;
+
+$header-brand-width:           auto !default;
+$header-brand-minimized-width: 56px !default;
 
 //$header-brand-padding-y:       ($nav-link-height - $header-brand-height) / 2 !default;
 
-$header-brand-font-size:        $font-size-base !default;
-$header-brand-font-weight:      700 !default;
-$header-brand-height:           $header-brand-font-size * $line-height-base !default;
+$header-brand-font-size:       $font-size-base !default;
+$header-brand-font-weight:     700 !default;
+$header-brand-height:          $header-brand-font-size * $line-height-base !default;
 
+$header-brand-color:           $header-active-color !default;
+$header-brand-bg:              transparent !default;
+$header-brand-border:          $header-border !default;
+$header-brand-hover-color:     $header-hover-color !default;
+$header-brand-hover-bg:        $header-hover-bg !default;
 
 // Toggler
-$header-toggler-bg:             transparent !default;
-$header-toggler-font-size:      $font-size-base !default;
-$header-toggler-border:         0 !default;
-$header-toggler-border-radius:  0 !default;
-$header-toggler-border-hover:   1px dotted $primary !default;
-$header-toggler-height:         $header-height !default;
+$header-toggler-bg:            transparent !default;
+$header-toggler-font-size:     $font-size-base !default;
+$header-toggler-border:        0 !default;
+$header-toggler-border-radius: 0 !default;
+$header-toggler-border-hover:  1px dotted $primary !default;
+$header-toggler-height:        $header-height !default;
 
-// Themes
-$header-dark-bg:                $gray-90 !default;
-$header-dark-color:             rgba($white, .75) !default;
-$header-dark-border:            (bottom: 1px solid $gray-80) !default;
-$header-dark-hover-color:       rgba($white, .9) !default;
-$header-dark-hover-bg:          $gray-80 !default;
-$header-dark-active-color:      $white !default;
-
-$header-dark-brand-bg:          transparent !default;
-$header-dark-brand-border:      0 !default;
-$header-dark-brand-color:       $header-dark-active-color !default;
-$header-dark-brand-hover-color: $header-dark-active-color !default;
-
-$subheader-dark-separator:      1px solid $gray-80 !default;
 
