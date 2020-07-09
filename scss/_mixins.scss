@@ -4,7 +4,9 @@
 @import "~rfs/scss";
 
 // Helpers
+@import "mixins/breakpoints";
 @import "mixins/image";
+@import "mixins/texts";
 
 // Skins
 @import "mixins/borders";

@@ -35,7 +35,6 @@
       "hugo-compile": "npm run hugo-build"
    },
    "dependencies": {
-      "bootstrap-icons": "^1.0.0-alpha5",
       "rfs": "^9.0.3"
    },
    "devDependencies": {
