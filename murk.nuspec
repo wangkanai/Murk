@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>murk</id>
+    <!-- pulled from package.json -->    
+    <version>0.0.0-dev</version>
+    <title>Murk</title>
+    <authors>Sarin Na Wangkanai</authors>
+    <owners>Sarin Na Wangkanai</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/wangkanai/Murk/</projectUrl>
+    <icon>murk.png</icon>
+    <description>Admin portal dark and mobile first frontend framework</description>
+    <releaseNotes>https://github.com/wangkanai/Murk/releases</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2020</copyright>
+    <tags>admin sass css css-framework scss html murk</tags>
+    <dependencies>
+    </dependencies>
+    <contentFiles>
+      <files include="**/*" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="design\murk.png" target="" />
+
+    <file src="dist\css\*.*" target="content\Content" />
+    <file src="dist\css\*.*" target="contentFiles\any\any\wwwroot\css" />
+
+    <file src="scss\**\*.scss" target="content\Content\murk" />
+    <file src="scss\**\*.scss" target="contentFiles\any\any\wwwroot\scss" />
+  </files>
+</package>
