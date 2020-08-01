@@ -4,4 +4,5 @@ This SCSS fronted framework was create for me to develop web application using p
 
 Dark and mobile first, this is the name of game.
 
-This will be the most clean looking semantic frontend framework ever. css `class` is only need when absolutely unavoidable. html `tag` will be the native way for this framework to work.
+This will be the cleanest looking semantic frontend framework ever. css `class` is only need when absolutely unavoidable. html `tag` will be the native way for this framework to work.
+
