@@ -357,3 +357,6 @@ MigrationBackup/
 # Project ignore
 package-lock.json
 dist/css/
+
+# Hugo build
+public/
