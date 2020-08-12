@@ -23,6 +23,7 @@
       "serve": "live-server dist/",
       "watch": "npm-run-all --parallel watch-*",
       "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+      "watch-css-docs": "nodemon --watch site/assets/scss/ --ext scss --exec \"npm run css-lint\"",
       "css": "npm-run-all css-compile css-prefix css-minify",
       "css-compile": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css",
       "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
@@ -30,9 +31,13 @@
       "css-lint-vars": "fusv scss/",
       "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/murk.min.css dist/css/murk.css",
       "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
-      "docs": "hugo server --port 9001 --disableFastRender",
+      "lint": "npm-run-all --parallel css-lint",
+      "docs": "npm-run-all docs-build",
       "docs-build": "hugo --cleanDestinationDir",
-      "docs-compile": "npm run docs-build"
+      "docs-compile": "npm run docs-build",
+      "docs-serve": "hugo server --port 9001 --disableFastRender",
+      "dist": "npm-run-all --parallel css",
+      "test": "npm-run-all lint dist docs-build docs-lint"
    },
    "dependencies": {
       "rfs": "^9.0.3"
