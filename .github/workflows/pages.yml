@@ -1,11 +1,14 @@
-name: Docs
-on: [push, pull_request]
+name: Pages
+on:
+   push:
+      branches:
+         - main
 env:
    CI: true
    NODE: 14.x
 
 jobs:
-   docs:
+   pages:
       runs-on: ubuntu-latest
 
       steps:
@@ -16,8 +19,6 @@ jobs:
             uses: actions/setup-node@v1
             with:
                node-version: "${{ env.NODE }}"
-
-         -  run: java -version
 
          -  name: Set up npm cache
             uses: actions/cache@v2
@@ -34,3 +35,8 @@ jobs:
          -  name: Build docs
             run: npm run docs
 
+         -  name: Deploy
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+               github_token: ${{ secrets.GITHUB_TOKEN }}
+               publish_dir: ./public
