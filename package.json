@@ -32,11 +32,12 @@
       "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/murk.min.css dist/css/murk.css",
       "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
       "lint": "npm-run-all --parallel css-lint",
-      "docs": "hugo server --port 9001 --disableFastRender",
+      "docs": "npm-run-all docs-build",
       "docs-build": "hugo --cleanDestinationDir",
       "docs-compile": "npm run docs-build",
+      "docs-serve": "hugo server --port 9001 --disableFastRender",
       "dist": "npm-run-all --parallel css",
-      "test": "npm-run-all lint dist"
+      "test": "npm-run-all lint dist docs-build docs-lint"
    },
    "dependencies": {
       "rfs": "^9.0.3"
