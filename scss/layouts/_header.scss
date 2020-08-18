@@ -27,7 +27,6 @@ header {
       border-top:    $subheader-separator;
    }
 
-
    .brand {
       display:         inline-flex;
       align-items:     center;
@@ -46,17 +45,17 @@ header {
          max-height:    $header-height;
          padding-right: $header-nav-link-padding-x;
       }
-   }
 
-   .brand,
-   .brand a {
-      color:            $header-brand-color;
-      background-color: $header-brand-bg;
-      //@include borders($header-brand-border);
+      &,
+      & a {
+         color:            $header-brand-color;
+         background-color: $header-brand-bg;
+         //@include borders($header-brand-border);
 
-      &:hover, &:focus {
-         color:            $header-brand-hover-color;
-         background-color: $header-brand-hover-bg;
+         &:hover, &:focus {
+            color:            $header-brand-hover-color;
+            background-color: $header-brand-hover-bg;
+         }
       }
    }
 
