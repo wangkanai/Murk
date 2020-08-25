@@ -25,7 +25,20 @@
 
 </head>
 <body>
-<header>
+<nav class="fixed nav-lg-show">
+   <a class="brand" href="/" aria-label="Murk"><img src="/brand/murk-logo.svg" alt="Murk" height="26"/>Murk</a>
+   <ul class="scroll">
+      <li class="item"><a href="/">Dashboard</a></li>
+      <li class="title"></li>
+   </ul>
+</nav>
+
+
+
+
+
+<main>
+   <header>
    <button class="toggler" type="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30" role="img">
          <title>Menu</title>
@@ -33,8 +46,7 @@
                d="M4 7h22M4 15h22M4 23h22"></path>
       </svg>
    </button>
-   <a class="brand" href="/" aria-label="Murk">
-      <img src="/brand/murk-logo.svg" alt="Murk" height="26"/>Murk</a>
+   <a class="brand" href="/" aria-label="Murk"><img src="/brand/murk-logo.svg" alt="Murk" height="26"/>Murk</a>
    <ul class="d-none d-md-flex">
       <li><a href="/">Home</a></li>
       <li><a href="/docs/1.0/getting-started/introduction/">Docs</a></li>
@@ -44,14 +56,16 @@
 
 
 
-<p>Getting started with Murk, a responsive frontend framework for administration web application with dark theme first
-   and mobile first.
-</p>
+   <p>Getting started with Murk, a responsive frontend framework for administration web application with dark theme
+      first
+      and mobile first.
+   </p>
 
-
-<footer>
+   
+   <footer>
    <span>footer</span>
 </footer>
 
+</main>
 </body>
 </html>

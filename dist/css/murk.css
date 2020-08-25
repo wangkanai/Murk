@@ -1087,15 +1087,12 @@ header .brand img {
   padding-right: 1rem;
 }
 
-header .brand,
-header .brand a {
+header .brand, header .brand a {
   color: rgba(255, 255, 255, 0.8);
   background-color: transparent;
 }
 
-header .brand:hover, header .brand:focus,
-header .brand a:hover,
-header .brand a:focus {
+header .brand:hover, header .brand:focus, header .brand a:hover, header .brand a:focus {
   color: rgba(255, 255, 255, 0.9);
   background-color: #424c55;
 }
@@ -1112,15 +1109,15 @@ header .toggler {
   border-radius: 0;
 }
 
-header .toggler:hover, header .toggler:focus {
+header .toggler:hover {
   color: #3679ac;
   border: 1px dotted #3679ac;
   box-shadow: none;
-  outline: 0;
+  text-decoration: none;
 }
 
-header .toggler:hover {
-  text-decoration: none;
+header .toggler:focus, header .toggler.focus {
+  outline: 0;
 }
 
 header .toggler .icon {
@@ -1145,6 +1142,20 @@ header ul li {
   position: relative;
 }
 
+header ul li button {
+  background-color: transparent;
+}
+
+header ul li button:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #424c55;
+}
+
+header ul li button:focus, header ul li button.focus {
+  outline: 0;
+}
+
 header ul li a,
 header ul li button {
   display: flex;
@@ -1155,9 +1166,8 @@ header ul li button {
   color: rgba(255, 255, 255, 0.75);
 }
 
-header ul li a:hover, header ul li a:focus,
-header ul li button:hover,
-header ul li button:focus {
+header ul li a:hover,
+header ul li button:hover {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
   background-color: #424c55;
@@ -1168,7 +1178,239 @@ footer {
 }
 
 nav {
-  display: block;
+  position: relative;
+  display: flex;
+  flex: 0 0 256px;
+  flex-direction: column;
+  order: -1;
+  width: 256px;
+  padding: 0;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(14, 14, 14, 0.75);
+  margin-left: -256px;
+}
+
+@media (max-width: 767.98px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1031;
+  }
+}
+
+nav[class*="bg-"] {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+nav.nav-lg {
+  float: 0 0 320px;
+  width: 320px;
+  margin-left: -320px;
+}
+
+@media (min-width: 768px) {
+  nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+  }
+}
+
+nav.overlaid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1032;
+}
+
+nav.close {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 0;
+}
+
+nav.close:hover {
+  text-decoration: none;
+}
+
+nav.close:focus, nav.close.focus {
+  outline: 0;
+}
+
+nav .brand {
+  display: flex;
+  flex: 0 0 56px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 14, 14, 0.75);
+  color: #fff;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+}
+
+nav ul.scroll {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+nav ul.scroll::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+nav ul.title {
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  font-size: 80%;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav-show,
+.nav-show {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
+}
+
+@media (min-width: 576px) {
+  .nav-sm-show,
+  .nav-show {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 576px) and (min-width: 768px) {
+  .nav-sm-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-sm-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-sm-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-md-show,
+  .nav-show {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .nav-md-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-md-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-md-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-lg-show,
+  .nav-show {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  .nav-lg-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-lg-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-lg-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-xl-show,
+  .nav-show {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 768px) {
+  .nav-xl-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-xl-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-xl-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav-xxl-show,
+  .nav-show {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1400px) and (min-width: 768px) {
+  .nav-xxl-show.fixed ~ main,
+  .nav-show.fixed ~ main {
+    margin-left: 256px;
+  }
+  .nav-xxl-show.fixed.nav-lg ~ main,
+  .nav-show.fixed.nav-lg ~ main {
+    margin-left: 320px;
+  }
+  .nav-xxl-show.fixed.nav-minimized ~ main,
+  .nav-show.fixed.nav-minimized ~ main {
+    margin-left: 56px;
+  }
 }
 
 aside {
@@ -1176,7 +1418,8 @@ aside {
 }
 
 main {
-  padding: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 section {
