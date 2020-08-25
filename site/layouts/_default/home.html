@@ -4,13 +4,18 @@
    {{ partial "head" . }}
 </head>
 <body>
-{{ partial "header" . }}
+{{ partial "nav" . }}
+{{ partial "aside" . }}
+<main>
+   {{ partial "header" . }}
 
-<p>Getting started with Murk, a responsive frontend framework for administration web application with dark theme first
-   and mobile first.
-</p>
+   <p>Getting started with Murk, a responsive frontend framework for administration web application with dark theme
+      first
+      and mobile first.
+   </p>
 
-{{ .Content }}
-{{ partial "footer" . }}
+   {{ .Content }}
+   {{ partial "footer" . }}
+</main>
 </body>
 </html>

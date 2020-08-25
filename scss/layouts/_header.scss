@@ -46,8 +46,7 @@ header {
          padding-right: $header-nav-link-padding-x;
       }
 
-      &,
-      & a {
+      &, a {
          color:            $header-brand-color;
          background-color: $header-brand-bg;
          //@include borders($header-brand-border);
@@ -71,16 +70,16 @@ header {
       @include borders($header-toggler-border);
       @include border-radius($header-toggler-border-radius);
 
-      &:hover,
-      &:focus {
-         color:      $primary;
-         border:     $header-toggler-border-hover;
-         box-shadow: none;
-         outline:    0;
+      &:hover {
+         color:           $primary;
+         border:          $header-toggler-border-hover;
+         box-shadow:      none;
+         text-decoration: none;
       }
 
-      &:hover {
-         text-decoration: none;
+      &:focus,
+      &.focus {
+         outline: 0;
       }
 
       .icon {
@@ -104,6 +103,23 @@ header {
       li {
          position: relative;
 
+         button {
+            background-color: transparent;
+            //@include borders($header-border);
+
+            &:hover {
+               text-decoration:  none;
+               color:            $header-hover-color;
+               background-color: $header-hover-bg;
+               //@include borders($header-hover-border);
+            }
+
+            &:focus,
+            &.focus {
+               outline: 0;
+            }
+         }
+
          a,
          button {
             display:       flex;
@@ -112,10 +128,8 @@ header {
             padding-right: $header-nav-link-padding-x;
             padding-left:  $header-nav-link-padding-x;
             color:         $header-color;
-            //@include borders($header-border);
 
-            &:hover,
-            &:focus {
+            &:hover {
                text-decoration:  none;
                color:            $header-hover-color;
                background-color: $header-hover-bg;

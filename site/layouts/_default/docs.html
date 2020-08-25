@@ -4,9 +4,12 @@
    {{ partial "head" . }}
 </head>
 <body>
+{{ partial "nav" . }}
+{{ partial "aside" . }}
+<main>
    {{ partial "header" . }}
-   {{ partial "aside" . }}
    {{ .Content }}
    {{ partial "footer" . }}
+</main>
 </body>
 </html>
