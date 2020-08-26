@@ -35,7 +35,7 @@ header {
       min-width:       $header-brand-minimized-width;
       min-height:      $header-height;
       font-weight:     $header-brand-font-weight;
-      transition:      width $transition-speed;
+      transition:      width $layout-transition-speed;
       padding-right:   $header-nav-link-padding-x;
       padding-left:    $header-nav-link-padding-x;
       @include font-size($header-brand-font-size);
