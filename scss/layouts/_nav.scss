@@ -1,6 +1,7 @@
 // Nav
 
-nav {
+nav,
+aside {
    position:       relative;
    display:        flex;
    flex:           0 0 $nav-width;
@@ -13,15 +14,19 @@ nav {
    background:     $nav-bg;
    @include borders($nav-borders);
 
+   &.right {
+      order: 99;
+   }
+
    @include media-breakpoint-down(breakpoint-before($mobile-breakpoint)) {
       position: fixed;
       top:      0;
-      left:     0;
       bottom:   0;
       z-index:  $zindex-fixed + 1;
+      @include align-position(0);
    }
 
-   margin-left:    - $nav-width;
+   @include align-margin(- $nav-width);
 
    &[class*="bg-"] {
       border-color: rgba($black, .1);
@@ -29,37 +34,39 @@ nav {
 
    @each $width, $value in $nav-widths {
       &.nav-#{$width} {
-         float:       0 0 $value;
-         width:       $value;
-         margin-left: - $value;
+         float: 0 0 $value;
+         width: $value;
+         @include align-margin(- $value);
       }
    }
-
-
 
    &.fixed {
       @include media-breakpoint-up($mobile-breakpoint) {
          position: fixed;
          top:      0;
-         left:     0;
          bottom:   0;
          z-index:  $zindex-fixed;
+         @include align-position(0);
       }
    }
 
    &.overlaid {
       position: fixed;
       top:      0;
-      left:     0;
       bottom:   0;
       z-index:  $zindex-fixed + 2;
+      @include align-position(0);
    }
+
+   // Components
 
    &.close {
       position: absolute;
       width:    $nav-brand-height;
       height:   $nav-brand-height;
       border:   0;
+      left:     0;
+      @include align-position(0);
 
       &:hover {
          text-decoration: none;
@@ -78,6 +85,17 @@ nav {
       justify-content: center;
       background:      $nav-brand-bg;
       color:           $nav-brand-color;
+
+      &-minimized {
+         display: none;
+      }
+   }
+
+   .header {
+      flex:       0 0 $nav-header-height;
+      padding:    $nav-header-padding-y $nav-header-padding-x;
+      text-align: center;
+      transition: $layout-transition-speed;
    }
 
    ul {
@@ -102,41 +120,112 @@ nav {
          }
       }
 
-      &.title {
-         padding:        $nav-list-title-padding-y $nav-list-title-padding-x;
-         margin-top:     $nav-list-title-margin-top;
-         @include font-size(80%);
-         font-weight:    700;
-         text-transform: uppercase;
-         transition:     $transition-speed;
-      }
+      li {
+         &.title {
+            padding:        $nav-list-title-padding-y $nav-list-title-padding-x;
+            margin-top:     $nav-list-title-margin-top;
+            @include font-size(80%);
+            font-weight:    700;
+            text-transform: uppercase;
+            transition:     $layout-transition-speed;
+         }
 
+         &.divider {
+            height:     10px;
+            transition: height $layout-transition-speed;
+         }
+
+         &.item {
+            width: inherit;
+         }
+
+         a {
+            display:         flex;
+            flex:            1;
+            align-items:     center;
+            padding:         $nav-list-link-padding-y $nav-list-link-padding-x;
+            text-decoration: none;
+            white-space:     nowrap;
+            transition:      background $layout-transition-speed, color $layout-transition-speed;
+            @if $enable-nav-rounded {
+               @include border-radius($border-radius);
+            }
+
+            .badge {
+               margin-left: auto;
+            }
+
+            &.disabled {
+               cursor: $cursor-disabled;
+            }
+
+            color:           $nav-list-link-color;
+            background:      $nav-list-link-bg;
+            border:          $nav-list-link-borders;
+            @media (hover: hover) {
+               &:hover {
+                  color:           $nav-list-link-color-hover;
+                  background:      $nav-list-link-bg-hover;
+                  border:          $nav-list-link-borders-hover;
+                  text-decoration: none;
+               }
+            }
+         }
+      }
    }
 }
 
+// Responsive behavior
 @each $breakpoint in map-keys($grid-breakpoints) {
    @include media-breakpoint-up($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
       .nav#{$infix}-show,
       .nav-show {
-         margin-left: 0;
-         @include media-breakpoint-up($mobile-breakpoint) {
-            &.fixed {
-               ~ main {
-                  margin-left: $nav-width;
-               }
+         &:not(.right) {
+            margin-left: 0;
+            @include media-breakpoint-up($mobile-breakpoint) {
+               &.fixed {
+                  ~ main {
+                     margin-left: $nav-width;
+                  }
 
-               @each $width, $value in $nav-widths {
-                  &.nav-#{$width} {
+                  @each $width, $value in $nav-widths {
+                     &.nav-#{$width} {
+                        ~ main {
+                           margin-left: $value;
+                        }
+                     }
+                  }
+
+                  &.nav-minimized {
                      ~ main {
-                        margin-left: $value;
+                        margin-left: $nav-minimized-width;
                      }
                   }
                }
+            }
+         }
 
-               &.nav-minimized {
+         &.right {
+            margin-right: 0;
+            @include media-breakpoint-up($mobile-breakpoint) {
+               &.fixed {
                   ~ main {
-                     margin-left: $nav-minimized-width;
+                     margin-right: $nav-width;
+                  }
+
+                  @each $width, $value in $nav-widths {
+                     &.nav-#{$width} {
+                        ~ main {
+                           margin-right: $value;
+                        }
+                     }
+                  }
+
+                  &.nav-minimized {
+                     ~ main {
+                        margin-right: $nav-minimized-width;
+                     }
                   }
                }
             }

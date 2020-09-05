@@ -1,0 +1,19 @@
+@mixin align-position($value) {
+   &:not(.right) {
+      left: $value;
+   }
+
+   &.right {
+      right: $value;
+   }
+}
+
+@mixin align-margin($value) {
+   &:not(.right) {
+      margin-left: $value;
+   }
+
+   &.right {
+      margin-right: $value;
+   }
+}
