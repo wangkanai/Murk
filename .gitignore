@@ -355,7 +355,7 @@ MigrationBackup/
 .ionide/
 
 # Project ignore
-package-lock.json
+# package-lock.json
 dist/css/
 
 # Hugo build
